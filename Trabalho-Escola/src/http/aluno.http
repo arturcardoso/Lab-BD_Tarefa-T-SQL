@@ -1,0 +1,71 @@
+//teste de requisições rest - alunos
+@baseURL = http://localhost:4000/api
+
+//ALUNOS
+//GET - Listando os alunos
+GET {{{baseURL}}}/aluno
+Content-Type: application/json
+
+###
+//POST - Insere um novo aluno
+POST {{{baseURL}}}/aluno
+Content-Type: application/json
+
+{
+    "ra": "2",
+    "nome": "Heitor Lorenzo',",
+    "cpf": "512.325.521-27",
+}
+
+###
+//DELETE - Excluindo um aluno pelo ra
+DELETE {{{baseURL}}}/aluno/2
+Content-Type: application/json
+
+###
+//PUT - Altera o novo aluno
+PUT {{{baseURL}}}/aluno
+Content-Type: application/json
+
+{
+    "ra": "2",
+    "nome": "Raphael Gonçalves",
+    "cpf": "516.492.987-68",
+}
+
+//PROFESSOR
+
+//GET - Listando os professores
+GET {{{baseURL}}}/professor
+Content-Type: application/json
+
+###
+//POST - Insere um novo professor
+POST {{{baseURL}}}/professor
+Content-Type: application/json
+
+{
+"rf": "5648",
+"nome": "Antonio Nunes",
+"cpf": "111.222.333-44",
+"especialidade": "Sociologia",
+}
+
+###
+//DELETE - Excluindo um professor pelo rf
+DELETE {{{baseURL}}}/professor/2
+Content-Type: application/json
+
+###
+//PUT - Altera o novo professor
+PUT {{{baseURL}}}/professor
+Content-Type: application/json
+
+{
+
+"rf": "2314",
+"nome": "Antonio Gomes da Silva",
+"cpf": "123.764.422-08",
+"especialidade": "Geografia",
+
+}
